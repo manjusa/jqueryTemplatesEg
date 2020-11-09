@@ -36,7 +36,7 @@
         var obj = jQuery.parseHTML(data);
         $.each(obj, function (i, el) {
           var k = $(obj[i]).attr("id");
-          if (k === "tableData") {
+          if (k === "peopleData") {
             markup = $(obj[i]).html();
           }
           if (k === "orderData") {
@@ -44,11 +44,11 @@
           }
         });
         /* Compile markup string as a named template*/
-        $.template("commonDynamicTemplate", markup);
-        $.template("commonDynamicTemplate1", markup1);
+        $.template("peopleDataTemplate", markup);
+        $.template("orderDataTemplate", markup1);
         /* Render the named template */
-        $.tmpl("commonDynamicTemplate", peopleResults).appendTo("#peopleTable");
-        $.tmpl("commonDynamicTemplate1", orderResults).appendTo("#orderTable");
+        $.tmpl("peopleDataTemplate", peopleResults).appendTo("#peopleTable");
+        $.tmpl("orderDataTemplate", orderResults).appendTo("#orderTable");
       });
     </script>
   </head>
@@ -75,7 +75,7 @@
     <div class="container">
       <div class="table-responsive">
         <h4 style="color: blue; margin-top: 55px">
-          Below comes from Dynamic Template- named "tableData"
+          Below comes from Dynamic Template- named "peopleData"
         </h4>
 
         <table class="table">
