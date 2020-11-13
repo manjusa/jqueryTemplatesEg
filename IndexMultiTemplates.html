@@ -36,19 +36,19 @@
         var obj = jQuery.parseHTML(data);
         $.each(obj, function (i, el) {
           var k = $(obj[i]).attr("id");
-          if (k === "peopleData") {
+          if (k === "PEOPLEDATATEMPLATE") {
             markup = $(obj[i]).html();
           }
-          if (k === "orderData") {
+          if (k === "OREDERDATATEMPLATE") {
             markup1 = $(obj[i]).html();
           }
         });
         /* Compile markup string as a named template*/
-        $.template("peopleDataTemplate", markup);
-        $.template("orderDataTemplate", markup1);
+        $.template("PEOPLEDATATEMPLATE", markup);
+        $.template("OREDERDATATEMPLATE", markup1);
         /* Render the named template */
-        $.tmpl("peopleDataTemplate", peopleResults).appendTo("#peopleTable");
-        $.tmpl("orderDataTemplate", orderResults).appendTo("#orderTable");
+        $.tmpl("PEOPLEDATATEMPLATE", peopleResults).appendTo("#peopleTable");
+        $.tmpl("OREDERDATATEMPLATE", orderResults).appendTo("#orderTable");
       });
     </script>
   </head>

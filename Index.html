@@ -20,9 +20,9 @@
       ) {
         var markup = data;
         /* Compile markup string as a named template */
-        $.template("commonDynamicTemplate", markup);
+        $.template("PEOPLEDATATEMPLATE", markup);
         /* Render the named template */
-        $.tmpl("commonDynamicTemplate", peopleData).appendTo("#peopleTable");
+        $.tmpl("PEOPLEDATATEMPLATE", peopleResults).appendTo("#peopleTable");
       });
     </script>
   </head>
